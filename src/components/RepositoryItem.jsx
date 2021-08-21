@@ -1,17 +1,19 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-('react-native');
+import ItemHeader from './ItemHeader';
+import ItemStats from './ItemStats';
+import { View, StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  flexContainer: {
+    display: 'flex',
+  },
+});
 
 const Item = ({ item }) => {
   return (
-    <View>
-      <Text>Full name: {item.fullName}</Text>
-      <Text>Description: {item.description}</Text>
-      <Text>Language: {item.language}</Text>
-      <Text>Stars: {item.stargazersCount}</Text>
-      <Text>Forks: {item.forksCount}</Text>
-      <Text>Reviews: {item.reviewCount}</Text>
-      <Text>Rating: {item.ratingAverage}</Text>
+    <View style={styles.flexContainer}>
+      <ItemHeader item={item} />
+      <ItemStats item={item} />
     </View>
   );
 };

@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     },
     flexHorizontal: {
       flexDirection: 'row',
+  
     },
     flexVertical: {
       flexDirection: 'column',
@@ -24,6 +25,7 @@ const styles = StyleSheet.create({
       backgroundColor: theme.colors.primary,
       padding: theme.paddings.mid,
       alignSelf: 'flex-start',
+      borderRadius:5
     },
   });
 

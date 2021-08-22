@@ -63,6 +63,7 @@ const RepositoryList = () => {
 
   return (
     <FlatList
+      style={{backgroundColor:'#e1e4e8'}}
       data={repositories}
       ItemSeparatorComponent={ItemSeparator}
       renderItem={renderItem}

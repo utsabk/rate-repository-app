@@ -6,6 +6,7 @@ import { View, StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   flexContainer: {
     display: 'flex',
+    backgroundColor: 'white',
   },
 });
 

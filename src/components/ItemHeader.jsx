@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     },
     flexVertical: {
       flexDirection: 'column',
-      paddingHorizontal:10
+      paddingHorizontal:10,
 
     },
     name: {

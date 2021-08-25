@@ -1,31 +1,19 @@
 import React from 'react';
-import { Text, TextInput, Pressable, View } from 'react-native';
-import { Formik, useField } from 'formik';
+import { Text, Pressable, View } from 'react-native';
+import { Formik } from 'formik';
+import FormikTextInput from './FormikTextInput';
 
 const initialValues = {
-    username: '',
-    password: '',
-  };
+  username: '',
+  password: '',
+};
 
 const SignInForm = ({ onSubmit }) => {
-  const [usernameField, usernameMeta, usernameHelpers] = useField('username');
-  const [passwordField, passwordMeta, passwordHelpers] = useField('password');
-
   return (
     <View>
-      <TextInput
-        placeholder="Enter username"
-        value={usernameField.value}
-        onChangeText={(text) => usernameHelpers.setValue(text)}
-      />
-      <TextInput
-        placeholder="Enter password"
-        value={passwordField.value}
-        secureTextEntry
-        onChangeText={(text) => passwordHelpers.setValue(text)}
-      />
-
-    <Pressable onPress={onSubmit}>
+      <FormikTextInput name="username" placeholder="Enter username" />
+      <FormikTextInput name="password" placeholder="Enter password" secureTextEntry />
+      <Pressable onPress={onSubmit}>
         <Text>Submit</Text>
       </Pressable>
     </View>
@@ -42,7 +30,7 @@ const SignIn = () => {
 
   return (
     <Formik initialValues={initialValues} onSubmit={onSubmit}>
-      {({handleSubmit}) => <SignInForm onSubmit={handleSubmit} />}
+      {({ handleSubmit }) => <SignInForm onSubmit={handleSubmit} />}
     </Formik>
   );
 };

@@ -10,12 +10,6 @@ const useRepositories = () => {
 
   if (loading) return 'Loading';
   if (error) return `Error!${error.message}`;
-
-  console.log('data:-', data);
-  console.log('error:-', error);
-  console.log('loading:-', loading);
-
-
   return data;
 };
 
